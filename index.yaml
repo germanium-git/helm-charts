@@ -3,6 +3,16 @@ entries:
   testchart:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2023-12-17T14:40:18.677257016Z"
+    description: A ConfigMap with the value of 'Hello World'
+    digest: f750410b4f8df290dbd97910c652b116ff4f11e9de3c5cfc73d05c1beae56cbc
+    name: testchart
+    type: application
+    urls:
+    - https://github.com/germanium-git/helm-charts/releases/download/testchart-0.1.8/testchart-0.1.8.tgz
+    version: 0.1.8
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2023-12-17T14:26:26.277610461Z"
     description: A ConfigMap with the value of 'Hello World'
     digest: 805167f4022b6602a0102875a7834b1494789e9673115ee785d07b83d720bcd0
@@ -21,4 +31,4 @@ entries:
     urls:
     - https://github.com/germanium-git/helm-charts/releases/download/testchart-0.1.6/testchart-0.1.6.tgz
     version: 0.1.6
-generated: "2023-12-17T14:26:26.277618366Z"
+generated: "2023-12-17T14:40:18.677273337Z"
