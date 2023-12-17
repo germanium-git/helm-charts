@@ -1,4 +1,4 @@
-# helm-charts
+# Helm-charts
 
 ## Usage
 
@@ -21,3 +21,11 @@ To install the my-\<chart-name> chart:
 To uninstall the chart:
 
     helm delete my-<chart-name>
+
+## Page
+
+The page with the instructions on how to use the helm repository is available on the following two addresses:
+
+https://helm.germanium.cz/
+
+https://germanium-git.github.io/helm-charts/
