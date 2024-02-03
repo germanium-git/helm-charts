@@ -1,0 +1,77 @@
+# Replica is hard-coded to 1 as the application can't be scaled up
+# replicaCount: 1
+
+image:
+  repository: ccrisan/motioneye
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "master-armhf"
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: true
+  # Annotations to add to the service account
+  annotations: {}
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name: "motioneye"
+
+
+persistentVolumeClaim:
+  etcPvStorage:
+    size: 5Gi
+  libPvStorage:
+    size: 40Gi
+
+podAnnotations: {}
+
+podSecurityContext: {}
+  # fsGroup: 2000
+
+securityContext: {}
+  # capabilities:
+  #   drop:
+  #   - ALL
+  # readOnlyRootFilesystem: true
+  # runAsNonRoot: true
+  # runAsUser: 1000
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 8765
+
+ingress:
+  enabled: enabled
+  className: traefik
+  annotations: {}
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  hosts:
+    - host: motioneye.germanium.cz
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
+
+resources:
+  limits:
+    cpu: 1
+    memory: 400Mi
+  requests:
+    cpu: 400m
+    memory: 200Mi
+
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
