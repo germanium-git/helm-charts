@@ -1,5 +1,16 @@
 apiVersion: v1
 entries:
+  motioneye:
+  - apiVersion: v2
+    appVersion: 0.42.1
+    created: "2024-02-03T18:08:18.7260579Z"
+    description: A Helm chart for Kubernetes
+    digest: e2723fbdce674168141cf53c52d4d4fbc7102c76395d9c57047e671e13ae13e7
+    name: motioneye
+    type: application
+    urls:
+    - https://github.com/germanium-git/helm-charts/releases/download/motioneye-0.1.0/motioneye-0.1.0.tgz
+    version: 0.1.0
   testchart:
   - apiVersion: v2
     appVersion: 1.0.0
@@ -31,4 +42,4 @@ entries:
     urls:
     - https://github.com/germanium-git/helm-charts/releases/download/testchart-0.1.6/testchart-0.1.6.tgz
     version: 0.1.6
-generated: "2023-12-17T14:40:18.677273337Z"
+generated: "2024-02-03T18:08:18.7260737Z"
