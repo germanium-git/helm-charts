@@ -74,6 +74,9 @@ spec:
       name: motioneye-lib-pv-storage
     spec:
       accessModes: [ "ReadWriteOnce" ]
+      {{- if .Values.storageClassName }}
+      storageClassName: {{ .Values.storageClassName }}
+      {{- end }}
       resources:
         requests:
           storage: {{ .Values.persistentVolumeClaim.libPvStorage.size }}
