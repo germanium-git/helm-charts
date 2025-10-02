@@ -47,6 +47,15 @@ spec:
               mountPath: /etc/motioneye
             - name: motioneye-lib-pv-storage
               mountPath: /var/lib/motioneye
+            - name: var-run
+              mountPath: /var/run
+            - name: var-log
+              mountPath: /var/log
+      volumes:
+        - emptyDir: {}
+          name: var-run
+        - emptyDir: {}
+          name: var-log
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
