@@ -21,6 +21,7 @@ serviceAccount:
   name: "motioneye"
 
 
+storageClassName: ""
 persistentVolumeClaim:
   etcPvStorage:
     size: 5Gi
